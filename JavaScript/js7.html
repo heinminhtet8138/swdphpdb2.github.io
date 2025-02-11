@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Array
+
+        // [] or Array()
+        let arr = [1,2,3,'a','b','c'];
+        console.log(arr);
+        console.log(arr[4]);
+        let arr1 = Array('aa','bb','cc',11,22,33);
+        console.log(arr1);
+        console.log(arr1[2]);
+        let arr2 = ['Mg Mg','Mandalay',32,43,['Yangon','Monywa','Taungyi']];
+        console.log(arr2);
+        console.log(arr2[4][1]);
+
+        let fruits = [];
+        fruits[0] = 'Apple';
+        fruits[1] = 'Oragne';
+        fruits[2] = 'Banana';
+        console.log(fruits);
+
+        fruits.push('Mango'); // Array ထဲကိုနောက်ကနေထပ်ထည့်
+        console.log(fruits);
+
+        fruits.unshift('Cherry'); // array ရဲ့ရှေ့ကနေထပ်ထည့်
+        console.log(fruits);
+
+        fruits.pop(); // Array ထဲကနောက်ဆုံးခမ်းကိုဖျက်
+        console.log(fruits);
+
+        fruits.shift(); // Array ထဲက ရှေ့ဆုံးခမ်းကိုဖျက် 
+        console.log(fruits);
+
+        console.log(fruits.sort());
+        console.log(fruits.reverse());
+
+        let fruits_str = fruits.toString();
+        console.log(fruits_str);
+        console.log(typeof(fruits_str));
+
+        fruits = fruits_str.split(',');
+        console.log(fruits);
+        let str = "Mg Mg";
+        arr3 = str.split(' ');
+        console.log(arr3);
+        
+        
+    </script>
+</body>
+</html>
