@@ -8,12 +8,9 @@
     <style>
         /*  
             Absolute unit - အရွယ်အစားကို အတိအကျ အသေသတ်မှတ်
-                px (pixels) - button, icon, image
-                            - heading, label
+                px - border, box shadows, text shadows, border radius, max-width limits
+
                 pt (point), cm, mm, in - print ထုတ်တဲ့အခါတွေမှာ သုံး 
-
-            Relative unit - parent element or root element ပေါ်မူတည် ပြီး အရွယ်အစားကိုပြောင်း လဲတဲ့ units
-
 
         */
         button {
@@ -23,6 +20,8 @@
 
         /*  
             percentage (%) - parent element ရဲ့ အရွယ်အစားပေါ်မူတည်ပြီးပြောင်း 
+
+            % - image width = 100%, multi-column layouts ( ဉပမာ- ဘယ်ဘက် sidebar က 30% ဉာဘက် content က 70% )
         */
 
         .container {
@@ -38,7 +37,10 @@
         }
 
         /*  
+        Relative unit - parent element or root element ပေါ်မူတည် ပြီး အရွယ်အစားကိုပြောင်း လဲတဲ့ units
+
             element (em) - parent element ရဲ့ font size ပေါ် မူတည် 
+            em - button (paddin, font size), lin height spacing 
         */
 
         .em-container {
@@ -63,7 +65,10 @@
             margin: 2em;
         } 
 
-        /* rem - root element */
+        /* rem - root element 
+        default - 16px
+            rem - font-size (h1-h6, p, ), gobal layout spacing, grid columns gaps
+        */
 
         html {
             font-size: 32px;
@@ -84,7 +89,9 @@
             margin-top: 3rem;
         }
 
-        /* vw, vh - view port width, height 100 */
+        /* vw, vh - view port width, height 100 
+            vw,vh - full screen လိုအပ်တဲ့အခါမှာသုံး 
+        */
 
         .vw-container {
             width: 50vw;
@@ -97,6 +104,13 @@
             height: 100vh;
             background-color: lightcoral;
         }
+
+        /* 
+        
+            
+            
+
+        */
 
     </style>
 
