@@ -26,7 +26,9 @@
         }
 
         /*  
-            relative -> top, right, bottom, left တွေသုံးရ , သူနေရာကနေ ယူ
+            relative ->သူနေရာကနေ စယူ, သူ့နေရာကို ဘယ်သူမှအစားဝင်လို့မရ  
+            top, right, bottom, left တွေသုံးရ , 
+            အဓိကအားဖြင့် absolute သုံးချင်တဲ့အခါ parent ကို relative ထားတဲ့နေရာမှာ အဓိကသုံး 
         */
         #box3 {
             position: relative;
@@ -34,7 +36,12 @@
             left: 50px;
         }
 
-        /* absolute -> parent ရှိရင် parent ကနေစပြီးကန်, မရှိရင် document ကနေကန် */
+        /* absolute -> parent ရှိရင် parent ကနေစပြီးကန်, မရှိရင် document ကနေကန် , 
+                        သုံးလေ့ရှိတာက Parent ကို relative ထားပြီး child ကို abolute ထားပြီးသုံး
+                        အဓိကအားဖြင့် card တို image တို့အပေါ်က 
+                        discount တို့ new တို့လို Badge တွေကိုထားချင်တဲအခါမှာအသုံးများ
+                        ပုံအပေါ်က စသားတွေကို overlay တင်ချင်တဲ့အခါမှာအသုံးများ 
+        */
         .parent-box {
             position: relative;
             border: 1px solid green;
@@ -48,7 +55,11 @@
             left: 50px;
         }
 
-        /* fixed */
+        /* fixed - ထားချင်တဲ့နေရာမှာ အသေသက်မှတ်ခြင်း
+                    အဓိကအားဖြင့် Navigation bar မှာအသုံးများ
+                    Website ရဲ့ ညာဘက်အောက်ထောင့်မှာ ရှိလေ့ရှိတဲ့ 
+                    back to top လို live chat လိုတွေမှာသုံး 
+        */
         h2 {
             position: fixed;
             top: 100px;
@@ -56,7 +67,10 @@
 
         }
 
-        /* sicky */
+        /* sicky - top 0 ဖြစ်တာနဲ့အဲ့နေရာမှာပဲ fix ဖြစ်နေ, relative နဲ့  fix နဲ့ပေါင်းထား  
+                    အချက်လက်တွေအများကြီးရှိတဲ့ table တွေကို scroll ဆွဲဖို့သုံး 
+                    sidebar တွေမှာသုံး 
+        */
         h3 {
             position: sticky;
             top: 30px;

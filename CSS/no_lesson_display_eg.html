@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Demonstration for Students</title>
+    <style>
+        /* သင်ခန်းစာထဲမပါဝင်ပါ နမူနာပြရန်သာ */
+
+        
+        /* ပုံမှန် ပတ်ဝန်းကျင် Layout အတွက် Background နှင့် Font သတ်မှတ်ခြင်း */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --------------------------------------------------
+           ၁။ POSITION: FIXED EXAMPLE
+           (နမူနာ: Website တွေရဲ့ အပေါ်က Navigation Bar)
+        -------------------------------------------------- */
+        .fixed-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1e293b;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 1000; /* အခြား element တွေရဲ့ အပေါ်မှာ အမြဲရှိနေစေရန် */
+        }
+
+        /* Content တွေ Navbar အောက်ထဲ ငုပ်မသွားစေရန် အပေါ်မှ Space ချန်ခြင်း */
+        .container {
+            max-width: 800px;
+            margin: 80px auto 40px auto;
+            padding: 20px;
+        }
+
+        /* ရှင်းလင်းချက် Box Layout ပုံစံ */
+        .intro-box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 5px solid #3b82f6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* --------------------------------------------------
+           ၂။ POSITION: STICKY EXAMPLE
+           (နမူနာ: Scroll ဆွဲရင် လိုက်ကပ်လာမယ့် Section ခေါင်းစဉ်)
+        -------------------------------------------------- */
+        .sticky-header {
+            position: sticky;
+            top: 55px; /* Fixed Navbar ရဲ့အောက်နားလေးတင် ကပ်နေစေရန် */
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        /* --------------------------------------------------
+           ၃။ POSITION: RELATIVE & ABSOLUTE EXAMPLE
+           (နမူနာ: Product Card ပေါ်မှာ Badge/တံဆိပ် ကပ်ခြင်း)
+        -------------------------------------------------- */
+        /* Parent Element ကို Relative ပေးရမည် */
+        .relative-card {
+            position: relative;
+            background-color: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        /* Child Element ကို Absolute ပေးပြီး နေရာစိတ်ကြိုက်ချမည် */
+        .absolute-badge {
+            position: absolute;
+            top: 15px;
+            right: -35px;
+            background-color: #ef4444; /* အနီရောင် တံဆိပ် */
+            color: white;
+            padding: 5px 40px;
+            font-size: 12px;
+            font-weight: bold;
+            transform: rotate(45deg); /* စောင်းစောင်းလေး လှလှပပဖြစ်အောင် */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* စာမျက်နှာကို အောက်သို့ Scroll ဆွဲလို့ရအောင် နေရာအကျယ်ချဲ့ထားခြင်း */
+        .dummy-scroll-space {
+            background-color: #e2e8f0;
+            padding: 40px 20px;
+            border-radius: 8px;
+            text-align: center;
+            color: #64748b;
+            margin-top: 20px;
+            height: 600px; /* အောက်သို့ Scroll အကြာကြီး ဆွဲကြည့်နိုင်ရန် Height ပေးထားခြင်း */
+        }
+
+        /* --------------------------------------------------
+           ၄။ POSITION: FIXED (CHAT MESSENGER BUTTON)
+        -------------------------------------------------- */
+        .fixed-chat-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #10b981; /* အစိမ်းရောင် */
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+            text-decoration: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ၁။ Fixed Header (အပေါ်မှာ အမြဲတမ်း တစ်နေရာတည်း ကပ်နေမည့်အရာ) -->
+    <div class="fixed-navbar">
+        📌 [position: fixed;] ဖြင့် ပြုလုပ်ထားသော Navbar (Scroll ဆွဲသော်လည်း မရွေ့ပါ)
+    </div>
+
+    <div class="container">
+        
+        <div class="intro-box">
+            <h2>ဆရာ/မ တို့ ကျောင်းသားများကို ပြသရန် နမူနာသင်ခန်းစာ</h2>
+            <p>ဤ Page တွင် CSS Position တစ်ခုချင်းစီ၏ လက်တွေ့အသုံးချပုံများကို ကုဒ်တစ်ခုတည်းဖြင့် စုစည်းပြသထားသည်။ စာမျက်နှာကို အောက်သို့ <strong>Scroll ဆွဲကြည့်ခြင်းဖြင့်</strong> ကွာခြားချက်များကို သိသာစွာ မြင်တွေ့နိုင်သည်။</p>
+        </div>
+
+        <!-- ၃။ Relative & Absolute Card Box -->
+        <div class="relative-card">
+            <!-- Absolute ဖြစ်သော အရောင်းတံဆိပ် (Card ၏ အပေါ်ညာထောင့်တွင် သွားကပ်နေမည်) -->
+            <div class="absolute-badge">SALE 50%</div>
+            
+            <h3>📦 Product Card (Relative + Absolute တွဲသုံးခြင်း)</h3>
+            <p><strong>ဆွေးနွေးချက် -</strong> ဤ Card တစ်ခုလုံးကို <code>position: relative;</code> ပေးထားပြီး၊ ညာဘက်အပေါ်ထောင့်က အနီရောင် Badge လေးကို <code>position: absolute;</code> ပေးထားသည်။ ထို့ကြောင့် အနီရောင် Badge သည် Card အပြင်ဘက်သို့ ကျော်ထွက်မသွားဘဲ Card ၏ အနားသတ်အတွင်း၌သာ စိတ်ကြိုက်နေရာယူနိုင်သည်။</p>
+        </div>
+
+        <!-- ၂။ Sticky Header (Scroll ဆွဲလာပြီး သူ့နေရာရောက်လျှင် လိုက်ကပ်လာမည့်အရာ) -->
+        <div class="sticky-header">
+            sticky 📌 [position: sticky;] သင်ခန်းစာ ခေါင်းစဉ် (အောက်သို့ ဆွဲကြည့်ပါ၊ မျက်နှာပြင်တွင် လိုက်ကပ်လာမည်)
+        </div>
+
+        <!-- ကျောင်းသားများ Scroll ဆွဲပြီး လေ့လာနိုင်ရန် ပြုလုပ်ထားသော အောက်ခံနေရာလွတ် -->
+        <div class="dummy-scroll-space">
+            <h3>🔽 အောက်သို့ ဆက်လက်၍ Scroll ဆွဲကြည့်ပါ 🔽</h3>
+            <p>(Scroll ဆွဲလိုက်သောအခါ အပေါ်က အပြာရောင် Sticky Bar သည် ပျောက်မသွားဘဲ Fixed Navbar ၏ အောက်တွင် လိုက်ကပ်လာသည်ကို သတိပြုပါ)</p>
+            <p>ညာဘက်အောက်ခြေရှိ အစိမ်းရောင် Chat Button လေးသည်လည်း <code>fixed</code> ဖြစ်၍ နေရာမရွေ့ဘဲ ငြိမ်နေမည် ဖြစ်သည်။</p>
+        </div>
+
+    </div>
+
+    <!-- ၄။ Fixed Chat Button (ညာဘက်အောက်ခြေတွင် အမြဲကပ်နေမည့်အရာ) -->
+    <a href="#" class="fixed-chat-btn">💬 Chat (Fixed)</a>
+
+</body>
+</html>
