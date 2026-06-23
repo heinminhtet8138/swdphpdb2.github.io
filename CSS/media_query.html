@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         /* 
-            @medis mediatype and (condition {
+            @media mediatype and (condition) {
                 css code 
             }) 
             
@@ -15,6 +15,11 @@
                 screen - computer screen, teblets, phones
                 print - printers
                 speech - scrren readers
+
+            ဝဘ်ဆိုက်တစ်ခုကို ဖန်တီးတဲ့အခါ အသုံးအများဆုံး စံသတ်မှတ်ချက် ၃ ခု ရှိတယ်ဆိုတာ ရှင်းပြပေးပါ -
+            - ဖုန်းမျက်နှာပြင် (Mobile): max-width: 767px (၇၆၇ ပစ်ဆယ်အောက် ငယ်သော Screen များ)
+            - တက်ဘလက် (Tablets): min-width: 768px မှ max-width: 1023px ကြား
+            - ကွန်ပျူတာ (Desktop): min-width: 1024px (၁၀၂၄ ပစ်ဆယ်ထက် ကြီးသော Screen များ)
         */
 
         .container {
@@ -25,7 +30,7 @@
             margin: 10px;
             padding: 20px;
             border-radius: 8px;
-            font-size: 30px;
+            font-size: 1.875rem; /* 30px နှင့် ညီမျှသည် */
         }
 
         /* Desktop */
@@ -44,7 +49,7 @@
             }
 
             .card {
-                font-size: 24px;
+                font-size: 1.5rem; /* 24px နှင့် ညီမျှသည် */
             }
         }
 
@@ -56,7 +61,7 @@
             }
 
             .card {
-                font-size: 18px;
+                font-size: 1.125rem; /* 18px နှင့် ညီမျှသည် */
             }
         }
     </style>

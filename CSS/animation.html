@@ -6,6 +6,10 @@
     <title>Document</title>
     <style>
         @keyframes change_animation {
+            /* transform 
+                translateX -> ဘေးဘယ်ညာ
+                translateY -> အပေါ် အောက် 
+            */
             /* from {
                 background-color: red;
                 transform: translateX(0);
@@ -23,7 +27,10 @@
                 background-color: yellow;
                 left: 200px;
                 top: 0;
-                transform: rotate(40deg);
+                /* roate -> 40deg ညာဘက်သို့ 40deg 
+                            -> -90deg ဘယ်ဘက်သုံး 90deg
+                */
+                transform: rotate(-40deg);
              }
              50% {
                 background-color: blue;
@@ -35,6 +42,7 @@
                 background-color: green;
                 left: 0;
                 top: 200px;
+                /* စောင်းတာ - skew(x,y) */
                 transform: skew(30deg,50deg);
              }
              100%{
@@ -53,7 +61,7 @@
             animation-name: change_animation;
             /* animation ကြာချိန် */
             animation-duration: 5s;
-            /* animatio လုပ်မယ့်အရေအတွက်, infinite ဆို animation မရပ် */
+            /* animatio လုပ်မယ့်အရေအတွက်, ၁,၂,၃, စတဲ့အကြိမ်ရေ , infinite ဆို animation မရပ် */
             animation-iteration-count: infinite;
         }
     </style>
